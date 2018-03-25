@@ -17,6 +17,7 @@ public class StillScreen extends Screen {
 
     public StillScreen(GamePanel p) {
         super(p);
+        Resources.music.loop();
         this.gpanel.score = 0;
         this.clouds.add(new Cloud(0, 0));
         this.clouds.add(new Cloud(1000, 0));
