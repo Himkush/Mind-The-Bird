@@ -47,6 +47,10 @@ public class Resources {
 
     public static Color skyColor;
 
+    public static Image mute;
+    public static Image notmute;
+
+
 
     public static AudioClip music;
     public static AudioClip flap;
@@ -103,6 +107,9 @@ public class Resources {
             jump2 = Applet.newAudioClip(Resources.class.getClassLoader().getResource("himanshu/in/resources/audio/jump2.wav"));
             jump3 = Applet.newAudioClip(Resources.class.getClassLoader().getResource("himanshu/in/resources/audio/jump3.wav"));
             ting = Applet.newAudioClip(Resources.class.getClassLoader().getResource("himanshu/in/resources/audio/ting.wav"));
+
+            notmute = ImageIO.read(Resources.class.getClassLoader().getResourceAsStream("himanshu/in/resources/images/mute_false.png"));
+            mute = ImageIO.read(Resources.class.getClassLoader().getResourceAsStream("himanshu/in/resources/images/mute_true.png"));
 
 
         } catch (IOException e) {

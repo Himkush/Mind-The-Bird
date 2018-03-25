@@ -17,6 +17,7 @@ public class GamePanel extends JPanel implements KeyListener, Runnable, MouseLis
 
     public Screen currentScreen;
     public int score = 0;
+    public boolean  isMute = false;
 
     public GamePanel() {
         this.setPreferredSize(new Dimension(Game.GAME_WIDTH, Game.GAME_HEIGHT));
@@ -31,7 +32,6 @@ public class GamePanel extends JPanel implements KeyListener, Runnable, MouseLis
         super.addNotify();
 
         Resources.load();
-
         this.currentScreen = new WelcomeScreen(this);
         Thread gameThread = new Thread(this);
         gameThread.start();

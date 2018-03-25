@@ -1,7 +1,5 @@
 package himanshu.in.Screen;
 
-import himanshu.in.Entities.Entity;
-import himanshu.in.Entities.Pappu;
 import himanshu.in.Entities.PappuStill;
 import himanshu.in.main.Game;
 import himanshu.in.main.GamePanel;
@@ -28,6 +26,7 @@ public class WelcomeScreen extends Screen{
 
         g.setColor(Resources.skyColor);
         g.fillRect(0,0, Game.GAME_WIDTH,Game.GAME_HEIGHT);
+
         super.draw(g);
         g.drawImage(Resources.stand,this.standX,this.standY,null);
         g.drawImage(Resources.planktop,this.plankTopX,this.plankTopY,null);
@@ -42,7 +41,10 @@ public class WelcomeScreen extends Screen{
         g.drawString("BIRD", this.wordStartingX + 55, this.wordStartingY +55);
         g.setColor(Color.BLACK);
         g.drawString("By Himanshu", this.wordStartingX, this.wordStartingY+2*55);
+        g.drawImage(this.mute,this.muteX,this.muteY,null);
         g.drawImage(Resources.controls,345,250,null);
+
+
         g.setColor(Color.WHITE);
         g.drawString("Start",750,250);
 
@@ -53,6 +55,8 @@ public class WelcomeScreen extends Screen{
         if((this.plankTopX<xCord && xCord<this.plankTopX+200)&&(this.plankTopY<yCord && yCord<this.plankTopY+130) ){
             this.gpanel.currentScreen = new StillScreen(this.gpanel);
         }
+        super.onMousePress(xCord, yCord);
+
 
     }
 }

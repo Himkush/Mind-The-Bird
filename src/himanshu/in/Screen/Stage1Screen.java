@@ -246,6 +246,7 @@ public class Stage1Screen extends Screen {
         g.setColor(new Color(207,67,13));
         g.setFont(new Font("Monospaced", Font.BOLD, 25));
         g.drawString(""+this.gpanel.score ,15,25);
+        g.drawImage(this.mute,this.muteX,this.muteY,null);
         if (this.pappu.powerUp){
             g.setFont(new Font("Helvetica", Font.BOLD, 40));
             g.drawString("POWER UP",this.wordStartingX, this.wordStartingY);
@@ -273,5 +274,12 @@ public class Stage1Screen extends Screen {
 
         }
 
+    @Override
+    public void onMousePress(int xCord, int yCord) {
+        super.onMousePress(xCord, yCord);
+        if(!this.gpanel.isMute){
+            Resources.music.loop();
+        }
+    }
 }
 

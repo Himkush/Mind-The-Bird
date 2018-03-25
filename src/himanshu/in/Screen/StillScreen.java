@@ -17,7 +17,9 @@ public class StillScreen extends Screen {
 
     public StillScreen(GamePanel p) {
         super(p);
-        Resources.music.loop();
+        if(!this.gpanel.isMute) {
+            Resources.music.loop();
+        }
         this.gpanel.score = 0;
         this.clouds.add(new Cloud(0, 0));
         this.clouds.add(new Cloud(1000, 0));
@@ -40,6 +42,8 @@ public class StillScreen extends Screen {
         g.setColor(new Color(207,67,13));
         g.setFont(new Font("Monospaced", Font.BOLD, 25));
         g.drawString(""+this.gpanel.score ,15,25);
+        g.drawImage(this.mute,this.muteX,this.muteY,null);
+
 
 
     }
@@ -58,6 +62,14 @@ public class StillScreen extends Screen {
     public void onKeyPress(int keyCode) {
         if(keyCode == KeyEvent.VK_UP || keyCode == KeyEvent.VK_ENTER){
             this.gpanel.currentScreen = new Stage1Screen(this.gpanel);
+        }
+    }
+
+    @Override
+    public void onMousePress(int xCord, int yCord) {
+        super.onMousePress(xCord, yCord);
+        if(!this.gpanel.isMute){
+            Resources.music.loop();
         }
     }
 }

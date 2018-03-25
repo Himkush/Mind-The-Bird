@@ -40,7 +40,7 @@ public class GameOverScreen extends Screen{
         g.setColor(new Color(207,67,13));
         g.setFont(new Font("Monospaced", Font.BOLD, 25));
         g.drawString(""+this.gpanel.score ,15,25);
-
+        g.drawImage(this.mute,this.muteX,this.muteY,null);
 
     }
     @Override
@@ -58,5 +58,6 @@ public class GameOverScreen extends Screen{
         if((this.plankTopX<xCord && xCord<this.plankTopX+200)&&(this.plankTopY<yCord && yCord<this.plankTopY+130) ){
             this.gpanel.currentScreen = new StillScreen(this.gpanel);
         }
+        super.onMousePress(xCord, yCord);
     }
 }
