@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Pappupakia:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Pappupakia_jar</output-path>
+    <root id="archive" name="Pappupakia.jar">
+      <element id="module-output" name="Pappupakia" />
+    </root>
+  </artifact>
+</component>
