@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="Pappupakia:jar2">
-    <output-path>$PROJECT_DIR$/out/artifacts/Pappupakia_jar2</output-path>
-    <root id="archive" name="Pappupakia.jar">
-      <element id="module-output" name="Pappupakia" />
-    </root>
-  </artifact>
-</component>

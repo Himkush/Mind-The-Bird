@@ -16,7 +16,7 @@ public class Pappu extends Entity {
         super(x, y);
         this.height = 40;
         this.width = 40;
-        this.yVel = 8;
+        this.yVel = 15;
         pappuImage.add(Resources.pappu1);
         pappuImage.add(Resources.pappu2);
         pappuImage.add(Resources.pappu3);

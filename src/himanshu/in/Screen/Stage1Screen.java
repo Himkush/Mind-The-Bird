@@ -260,7 +260,7 @@ public class Stage1Screen extends Screen {
     @Override
     public void onKeyPress(int keyCode) {
         if ((keyCode == KeyEvent.VK_UP) || (keyCode==KeyEvent.VK_ENTER)){
-            this.pappu.y -= 10;
+            this.pappu.y -= 15;
             this.gpanel.score += 1;
             Resources.flap.play();
             this.pappu.pappuUp = false;
